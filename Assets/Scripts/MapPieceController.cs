@@ -10,6 +10,7 @@ public class MapPieceController : MonoBehaviour
     private float yOrigin;
     private int lastFLoatDirection;
     private bool destroy;
+    public LevelController level;
 
     // Use this for initialization
     void Start()
@@ -17,6 +18,7 @@ public class MapPieceController : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         yOrigin = gameObject.transform.position.y;
         lastFLoatDirection = -1;
+        level.hasMapPiece = true;
     }
 
     void FixedUpdate()
@@ -44,6 +46,7 @@ public class MapPieceController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        level.foundMapPiece();
         Destroy(gameObject);
     }
 }

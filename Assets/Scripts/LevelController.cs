@@ -35,6 +35,11 @@ public class LevelController : MonoBehaviour
         return mapPieceWasFound;
     }
 
+    public void foundMapPiece()
+    {
+        mapPieceWasFound = true;
+    }
+
     public void print()
     {
         string data = "ID: " + ID + ", completed: " + hasBeenCompleted + ", hasMapPiece: " + hasMapPiece + ", mapPieceWasFound: " + mapPieceWasFound;
