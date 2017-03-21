@@ -51,7 +51,7 @@ public class BlockController : MonoBehaviour {
 				gameObject.GetComponent<Rigidbody2D> ().gravityScale = -2;
 			}
 
-			gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX;
+			gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		}
 
 		if (blockType != BlockType.Static && gravityDirection.Equals (GravityDirection.DOWN) && gameObject.GetComponent<Transform> ().position.y <= OFF_SCREEN_Y_POSITION_LOWER) 
