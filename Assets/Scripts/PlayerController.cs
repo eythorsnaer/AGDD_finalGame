@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     private bool jump;
     private bool canJump;
     private float maxSpeed = 3f;
-    private float jumpForce = 4f;
+    private float jumpForce = 8f;
     private Animator anim;
     private bool isGrounded;
     private float jumpTime = 0;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
         facingRight = true;
         anim = GetComponent<Animator>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         isGrounded = Physics2D.Linecast(transform.position - new Vector3(0, .65f, 0), transform.position - new Vector3(0, 0.7f, 0));
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetKey(KeyCode.A))
         {
             Move(-1f, jump);
-            facingRight = false;         
+            facingRight = false;
         }
         if(Input.GetKey(KeyCode.D))
         {
@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour {
         {
             jump = false;
         }
-
     }
 
     public void Move(float move, bool jump)
