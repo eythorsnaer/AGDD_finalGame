@@ -6,20 +6,32 @@ public class PlayerController : MonoBehaviour {
 
     private bool facingRight;
     private bool jump;
+    private bool canJump;
     private float maxSpeed = 3f;
-    private float jumpForce = 40f;
+    private float jumpForce = 4f;
+    private Animator anim;
+    private bool isGrounded;
+    private float jumpTime = 0;
+    private float jumpPressedTime = 0;
+    private float countdown = .55f;
+
 
 	// Use this for initialization
 	void Start () {
+        canJump = true;
         facingRight = true;
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetKey(KeyCode.Space))
+        isGrounded = Physics2D.Linecast(transform.position - new Vector3(0, .65f, 0), transform.position - new Vector3(0, 0.7f, 0));
+
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
-            jump = true;
-            Move(0, jump);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
+            jumpTime = Time.time;
+            jumpPressedTime = jumpTime + countdown;
         }
         if(Input.GetKey(KeyCode.A))
         {
@@ -35,27 +47,20 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
         }
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKeyUp(KeyCode.Space)) //Temporary, needs a ground check
         {
             jump = false;
         }
-
-
-
-
 
     }
 
     public void Move(float move, bool jump)
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        if(jump)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
-
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
-        }
     }
 
-
+    public void checkGround()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector2.down, 1000f);
+    }
 }
