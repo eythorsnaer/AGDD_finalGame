@@ -9,37 +9,38 @@ public class Player2Controller : MonoBehaviour
 	[HideInInspector]
 	public bool jump = false;				// Condition for whether the player should jump.
 
-
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
-	//public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
+	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
-
 
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	private bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
 
-
 	void Awake()
 	{
-		// Setting up references.
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
 	}
 
-
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		//grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 		grounded = Physics2D.OverlapCircle(groundCheck.position, 1, 1 << LayerMask.NameToLayer("Ground"));
-
+		
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown("Jump") && grounded)
+		if(Input.GetButtonDown("Jump") && grounded) {
 			jump = true;
+			anim.SetBool("Jumping", true);
+			anim.SetBool("Jumping", false);
+		} else if (grounded) {
+			anim.SetBool("Jumping", false);
+		} else if (!grounded) {
+			anim.SetBool("Jumping", true);
+			anim.SetBool("Running", false);
+		}
 	}
-
 
 	void FixedUpdate ()
 	{
@@ -82,8 +83,8 @@ public class Player2Controller : MonoBehaviour
 			anim.SetBool("Running", false);
 
 			// Play a random jump audio clip.
-			//int i = Random.Range(0, jumpClips.Length);
-			//AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+			int i = Random.Range(0, jumpClips.Length);
+			AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
 
 			// Add a vertical force to the player.
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
