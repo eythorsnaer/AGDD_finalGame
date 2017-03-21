@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         facingRight = true;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         if(Input.GetKey(KeyCode.Space))
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetKey(KeyCode.A))
         {
             Move(-1f, jump);
-            facingRight = false;         
+            facingRight = false;
         }
         if(Input.GetKey(KeyCode.D))
         {
@@ -39,11 +39,6 @@ public class PlayerController : MonoBehaviour {
         {
             jump = false;
         }
-
-
-
-
-
     }
 
     public void Move(float move, bool jump)
@@ -56,6 +51,4 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
         }
     }
-
-
 }
