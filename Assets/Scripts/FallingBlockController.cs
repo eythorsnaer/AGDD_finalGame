@@ -7,6 +7,7 @@ public class FallingBlockController : MonoBehaviour {
 	private bool falling;
 	private bool hasGravity;
 	public float fallDelay;
+	private float OFF_SCREEN_Y_POSITION = -9;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,11 @@ public class FallingBlockController : MonoBehaviour {
 			hasGravity = true;
 			gameObject.GetComponent<Rigidbody2D> ().gravityScale = 1;
 			gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX;
+		}
+
+		if (gameObject.GetComponent<Transform> ().position.y <= OFF_SCREEN_Y_POSITION) 
+		{
+			Destroy (gameObject);
 		}
 	}
 
