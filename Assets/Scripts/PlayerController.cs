@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
 		if (gameObject.GetComponent<Transform> ().position.y <= -20 || gameObject.GetComponent<Transform> ().position.y >= 20) 
 		{
-			SceneManager.LoadScene (level.ID);
+			SceneManager.LoadScene (level.ID + 1);
 		}
 	}
 
