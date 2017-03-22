@@ -10,9 +10,17 @@ public class LevelController : MonoBehaviour
     public bool hasMapPiece;
     private bool mapPieceWasFound;
 	public GameObject mapPiece;
+	public GameController gameController;
 
 	public void Start()
 	{
+		LevelData level = gameController.getLevel ();
+
+		this.hasBeenCompleted = level.hasBeenCompleted;
+		this.hasMapPiece = level.hasMapPiece;
+		this.mapPieceWasFound = level.mapPieceWasFound;
+		this.ID = level.ID;
+
 		if (hasMapPiece && mapPieceWasFound) 
 		{
 			mapPiece.SetActive (false);

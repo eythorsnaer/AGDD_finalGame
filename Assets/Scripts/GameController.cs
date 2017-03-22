@@ -49,6 +49,11 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	public LevelData getLevel()
+	{
+		return data.levels [currentLevel.GetComponent<LevelController> ().getID()];
+	}
+
 	public List<LevelData> getLevels()
 	{
 		if (data == null) 
