@@ -21,12 +21,12 @@ GameObject:
   - component: {fileID: 4461984466625092}
   - component: {fileID: 212287405190416708}
   - component: {fileID: 95852576601245686}
-  - component: {fileID: 61806249029747266}
   - component: {fileID: 50796587136033000}
   - component: {fileID: 114857081609966560}
+  - component: {fileID: 70797538349573442}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137303765301998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.29, y: -3.64, z: 0}
+  m_LocalPosition: {x: -5.598958, y: 0.9912139, z: 3.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61806249029747266
-BoxCollider2D:
+--- !u!70 &70797538349573442
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,9 +75,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.05}
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 1.15}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 1.28}
+  m_Direction: 0
 --- !u!95 &95852576601245686
 Animator:
   serializedVersion: 3
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1137303765301998}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 805dba70b6e1e5642a7289d78efcd996, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6502511c8221d4ff7acc7e743a1783c6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
