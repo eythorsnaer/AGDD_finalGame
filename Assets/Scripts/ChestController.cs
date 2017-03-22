@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 public class ChestController : MonoBehaviour {
 	[SerializeField]
 	public GameController gameController;
-<<<<<<< HEAD
 	public LevelController level;
-=======
+
 	[SerializeField]
 	public Transform winMenu;
 	[SerializeField]
 	public AudioClip winClip;
->>>>>>> origin/master
+
 	private float timeUntilLoad = 2;
 	private bool hasWon = false;
 	private Transform player;
@@ -35,19 +34,13 @@ public class ChestController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-<<<<<<< HEAD
+
         if(other.CompareTag("Player")) {
 			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
 			anim.SetBool ("openChest", true);
 			level.completedLevel ();
 			gameController.Save ();
-=======
-		if(other.CompareTag("Player")) {
-			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
-			anim.SetBool("openChest", true);
->>>>>>> origin/master
 			hasWon = true;
-
 			player.GetComponent<PlayerController>().enabled = false;
 			winMenu.gameObject.SetActive (true);
 			gameController.Save ();
