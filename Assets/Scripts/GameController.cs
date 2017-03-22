@@ -12,31 +12,31 @@ public class GameController : MonoBehaviour {
 
 	void Awake()
     {
-        /*if (controller == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            controller = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }*/
         Load();
     }
 
     public void Save()
     {
-        BinaryFormatter bf = new BinaryFormatter();
+		BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/gameProgress.dat");
 
         LevelController currentLevelController = currentLevel.GetComponent<LevelController>();
+		LevelData level = new LevelData();
 
-        LevelData level = new LevelData();
-
-        level.ID = currentLevelController.getID();
-        level.hasBeenCompleted = currentLevelController.getHasBeenCompleted();
-        level.hasMapPiece = currentLevelController.gethasMapPiece();
-        level.mapPieceWasFound = currentLevelController.getMapPieceFound();
+		if (currentLevelController == null) 
+		{
+			level.ID = 0;
+			level.hasBeenCompleted = false;
+			level.hasMapPiece = false;
+			level.mapPieceWasFound = false;
+		} 
+		else 
+		{
+			level.ID = currentLevelController.getID();
+			level.hasBeenCompleted = currentLevelController.getHasBeenCompleted();
+			level.hasMapPiece = currentLevelController.gethasMapPiece();
+			level.mapPieceWasFound = currentLevelController.getMapPieceFound();
+		}
 
         data.levels[level.ID] = level;
 
@@ -45,6 +45,19 @@ public class GameController : MonoBehaviour {
         bf.Serialize(file, data);
         file.Close();
     }
+
+	public int getCurrentLevelIndex()
+	{
+		if (currentLevel == null) 
+		{
+			Debug.Log ("SOMETHING THAT SHOULDN'T HAVE HAPPENED HAPPENED - CHECK GAME MANAGER");
+			return -1;
+		} 
+		else 
+		{
+			return currentLevel.GetComponent<LevelController> ().getID ();
+		}
+	}
 
     public void Load()
     {
