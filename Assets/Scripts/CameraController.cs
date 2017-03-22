@@ -17,12 +17,18 @@ public class CameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Screen.SetResolution(1920, 1080, true);
-		target = GameObject.FindGameObjectWithTag("Player").transform;
+		if (GameObject.FindGameObjectWithTag ("Player") != null) 
+		{
+			target = GameObject.FindGameObjectWithTag("Player").transform;
+		}
     }
  
      // Update is called once per frame
      void LateUpdate () 
      {
-		transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin, xMax), Mathf.Clamp(target.position.y, yMin, yMax), transform.position.z);
-	 }
+		if (target != null) 
+		{
+			transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin, xMax), Mathf.Clamp(target.position.y, yMin, yMax), transform.position.z);
+		}
+	}
 }

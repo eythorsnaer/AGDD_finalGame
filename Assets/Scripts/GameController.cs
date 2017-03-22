@@ -8,9 +8,9 @@ using System;
 public class GameController : MonoBehaviour {
     public GameObject currentLevel;
     private GameData data;
-    private int numberOfLevelsInGame = 3;
+    private int numberOfLevelsInGame = 8;
 
-	void Awake()
+	void Start()
     {
         Load();
     }

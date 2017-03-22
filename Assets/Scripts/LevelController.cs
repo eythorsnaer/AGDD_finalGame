@@ -9,6 +9,15 @@ public class LevelController : MonoBehaviour
     private bool hasBeenCompleted;
     public bool hasMapPiece;
     private bool mapPieceWasFound;
+	public GameObject mapPiece;
+
+	public void Start()
+	{
+		if (hasMapPiece) 
+		{
+			mapPiece.SetActive (false);
+		}
+	}
 
     public void mapPieceFound()
     {
