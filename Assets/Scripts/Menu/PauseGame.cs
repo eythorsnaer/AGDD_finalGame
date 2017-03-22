@@ -5,12 +5,16 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour {
 	[SerializeField]
 	public Transform canvas;
-	[SerializeField]
+
 	private Transform player;
 	[SerializeField]
 	public Transform pauseMenu;
 	[SerializeField]
 	public Transform controlsMenu;
+
+	void Start() {
+		player = GameObject.FindGameObjectWithTag("Player").transform;
+	}
 
 	// Update is called once per frame
 	void Update () {

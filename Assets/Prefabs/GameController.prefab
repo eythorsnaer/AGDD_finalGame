@@ -52,10 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ded9a761038345f1b9325d79ad8864f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  canvas: {fileID: 224979587537370744, guid: 6a4fc0782298f4cadaa6e16217755ba7, type: 2}
   player: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  controlsMenu: {fileID: 0}
+  pauseMenu: {fileID: 224979587537370744, guid: 6a4fc0782298f4cadaa6e16217755ba7,
+    type: 2}
+  controlsMenu: {fileID: 224725081829908480, guid: 99836da93267b41ff9f16a31a9cf64f0,
+    type: 2}
 --- !u!114 &114612836893371568
 MonoBehaviour:
   m_ObjectHideFlags: 1
