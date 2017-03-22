@@ -4,40 +4,53 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChestController : MonoBehaviour {
+	[SerializeField]
 	public GameController gameController;
-	private Animator anim;
+	[SerializeField]
+	public Transform winMenu;
+	[SerializeField]
 	public AudioClip winClip;
 	private float timeUntilLoad = 2;
 	private bool hasWon = false;
+	private Transform player;
+	private Animator anim;
+	
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
-	void Update()
-	{
-		if (hasWon) 
-		{
-			timeUntilLoad -= Time.deltaTime;
-
-			if (timeUntilLoad <= 0)
-			{
-				SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 2);
+	void Update() {
+		if (hasWon) {
+			if (Input.GetKeyDown(KeyCode.Space)) {
+				LoadNextLevel();
 			}
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("in trigger");
-        if(other.CompareTag("Player")) {
+		if(other.CompareTag("Player")) {
 			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
 			anim.SetBool("openChest", true);
-			Debug.Log("in win trigger");
-
-			gameController.Save ();
 			hasWon = true;
+
+			player.GetComponent<PlayerController>().enabled = false;
+			winMenu.gameObject.SetActive (true);
+			gameController.Save ();
+			//StartCoroutine(LoadNextLevel(timeUntilLoad));
 		}
-		//gameController.Save();
     }
+
+	public void LoadNextLevel()
+	{
+		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 1);
+	}
+
+	IEnumerator LoadNextLevel(float time)
+	{
+		yield return new WaitForSeconds(time);
+		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 1);
+	}
 }
