@@ -5,23 +5,35 @@ using UnityEngine;
 public class Player2Controller : MonoBehaviour
 {
 	[HideInInspector]
-	public bool facingRight = true;			// For determining which way the player is currently facing.
+	public bool facingRight = true;
 	[HideInInspector]
-	public bool jump = false;				// Condition for whether the player should jump.
+	public bool jump = false;
 
-	public float moveForce = 365f;			// Amount of force added to move the player left and right.
-	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
-	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
-	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
+	public float moveForce = 365f;
+	public float maxSpeed = 5f;
+	public AudioClip[] jumpClips;
+	public float jumpForce = 1000f;
 
-	private Transform groundCheck;			// A position marking where to check if the player is grounded.
-	private bool grounded = false;			// Whether or not the player is grounded.
-	private Animator anim;					// Reference to the player's animator component.
+	private Transform groundCheck;
+	private bool grounded = false;
+	private bool crouching = false;
+	private Animator anim;
+
+	private BoxCollider2D playerCollider;
+    private float crouchHeight;
+    private float standHeight;
+    private float crouchOffset;
 
 	void Awake()
 	{
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
+		playerCollider = GetComponent<BoxCollider2D>();
+
+		standHeight = playerCollider.size.y;
+		crouchHeight = standHeight/2;
+		crouchOffset = 0.02f;
+		
 	}
 
 	void Update()
@@ -33,55 +45,55 @@ public class Player2Controller : MonoBehaviour
 		if(Input.GetButtonDown("Jump") && grounded) {
 			jump = true;
 			anim.SetBool("Jumping", true);
-			anim.SetBool("Jumping", false);
-		} else if (grounded) {
-			anim.SetBool("Jumping", false);
+			anim.SetBool("Running", false);
 		} else if (!grounded) {
 			anim.SetBool("Jumping", true);
 			anim.SetBool("Running", false);
+		} else {
+			anim.SetBool("Jumping", false);
 		}
 	}
 
 	void FixedUpdate ()
 	{
-		// Cache the horizontal input.
 		float h = Input.GetAxis("Horizontal");
-
-		// The Speed animator parameter is set to the absolute value of the horizontal input.
-		//anim.SetFloat("Speed", Mathf.Abs(h));
 
 		if (h >= 0.1 || h <= -0.1) {
 			anim.SetBool("Running", true);
-		}
-		else {
+		} else {
 			anim.SetBool("Running", false);
 		}
 
+		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))) {
+            Crouch();
+        }
+ 
+        if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))) {
+        	StandUp(); 
+        }
+
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
-			// ... add a force to the player.
+		if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed) {
 			GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+		}
 
 		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
+		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed) {
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
 
 		// If the input is moving the player right and the player is facing left...
-		if(h > 0 && !facingRight)
-			// ... flip the player.
+		if(h > 0 && !facingRight) {
 			Flip();
+		}
 		// Otherwise if the input is moving the player left and the player is facing right...
-		else if(h < 0 && facingRight)
-			// ... flip the player.
+		else if(h < 0 && facingRight) {
 			Flip();
+		}
 
 		// If the player should jump...
 		if(jump) {
-			// Set the Jump animator trigger parameter.
-			//anim.SetTrigger("Jump");
-			anim.SetBool("Running", false);
-
 			// Play a random jump audio clip.
 			int i = Random.Range(0, jumpClips.Length);
 			AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
@@ -92,6 +104,7 @@ public class Player2Controller : MonoBehaviour
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
 		}
+
 	}
 	
 	
@@ -107,5 +120,21 @@ public class Player2Controller : MonoBehaviour
 	}
 
 
+	void Crouch() {
+		crouching = true;
+		anim.SetBool("Crouching", true);
+		anim.SetBool("Jumping", false);
+		anim.SetBool("Running", false);
 
+        playerCollider.size = new Vector2 (playerCollider.size.x, crouchHeight);
+        playerCollider.offset = new Vector2 (0, crouchOffset);
+	}
+
+	void StandUp () {
+		crouching = false;
+		anim.SetBool("Crouching", false);
+
+		playerCollider.size = new Vector2 (playerCollider.size.x, standHeight);
+        playerCollider.offset = new Vector2 (0, 0);
+	}
 }
