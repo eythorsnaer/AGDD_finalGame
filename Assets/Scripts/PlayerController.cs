@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		grounded = Physics2D.OverlapCircle(groundCheck.position, 1, 1 << LayerMask.NameToLayer("Ground"));
+		grounded = Physics2D.OverlapCircle(groundCheck.position, 0.7f, 1 << LayerMask.NameToLayer("Ground"));
 		//grounded = Physics2D.Linecast(transform.position - new Vector3(0, 0.8f, 0), transform.position - new Vector3(0, 1, 0));
 		
 		// If the jump button is pressed and the player is grounded then the player should jump.
