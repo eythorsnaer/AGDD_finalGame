@@ -46,7 +46,10 @@ public class MapPieceController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        level.foundMapPiece();
-        Destroy(gameObject);
+		if (other.gameObject.tag == "Player") 
+		{
+			level.foundMapPiece ();
+			Destroy (gameObject);
+		}
     }
 }
