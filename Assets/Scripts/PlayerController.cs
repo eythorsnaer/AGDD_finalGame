@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     private bool jump;
     private bool canJump;
     private float maxSpeed = 3f;
-    private float jumpForce = 8f;
+    private float jumpForce = 6f;
     private Animator anim;
     private bool isGrounded;
     private float jumpTime = 0;
@@ -24,14 +24,18 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-        isGrounded = Physics2D.Linecast(transform.position - new Vector3(0, .65f, 0), transform.position - new Vector3(0, 0.7f, 0));
+	void FixedUpdate () {
+        isGrounded = Physics2D.Linecast(transform.position - new Vector3(0, .65f, 0), transform.position - new Vector3(0, 1f, 0));
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space) && isGrounded) || jump)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
-            jumpTime = Time.time;
-            jumpPressedTime = jumpTime + countdown;
+            if(!jump)
+            {
+                jumpTime = Time.time;
+                jumpPressedTime = jumpTime + countdown;
+            }
+            jump = true;
         }
         if(Input.GetKey(KeyCode.A))
         {
@@ -47,7 +51,7 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
         }
-        if(Input.GetKeyUp(KeyCode.Space)) //Temporary, needs a ground check
+        if(Input.GetKeyUp(KeyCode.Space) || Time.time >= jumpPressedTime) 
         {
             jump = false;
         }
@@ -56,10 +60,5 @@ public class PlayerController : MonoBehaviour {
     public void Move(float move, bool jump)
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-    }
-
-    public void checkGround()
-    {
-        isGrounded = Physics.Raycast(transform.position, Vector2.down, 1000f);
     }
 }
