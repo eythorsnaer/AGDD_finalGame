@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour {
 	[SerializeField]
@@ -42,8 +43,18 @@ public class PauseGame : MonoBehaviour {
 		}
 	}
 
+	public void MainMenuControlls() {
+		if (controlsMenu.gameObject.activeInHierarchy == false) {
+			controlsMenu.gameObject.SetActive (true);
+		} else {
+			controlsMenu.gameObject.SetActive (false);
+			Debug.Log("baaa");
+		}
+	}
+
 	public void Exit() {
-		Application.Quit();
+		SceneManager.LoadScene (0);
+		//Application.Quit();
 		//UnityEditor.EditorApplication.isPlaying = false;
 	}
 
