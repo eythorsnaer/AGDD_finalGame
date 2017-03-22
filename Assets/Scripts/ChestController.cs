@@ -50,12 +50,12 @@ public class ChestController : MonoBehaviour {
 
 	public void LoadNextLevel()
 	{
-		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 1);
+		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 2);
 	}
 
 	IEnumerator LoadNextLevel(float time)
 	{
 		yield return new WaitForSeconds(time);
-		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 1);
+		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 2);
 	}
 }
