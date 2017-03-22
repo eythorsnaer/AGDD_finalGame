@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("Jumping", false);
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) && isGrounded) || jump)
+        if (((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) || jump)
         {
             if(isCrouching)
             {
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("Jumping", true);
             anim.SetBool("Running", false);
         }
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             Move(-1f, jump);
             if(facingRight)
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour {
             }
             
         }
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             Move(1f, jump);
             if (!facingRight)
@@ -89,17 +89,17 @@ public class PlayerController : MonoBehaviour {
                 anim.SetBool("Running", true);
             }
         }
-        if((Input.GetKeyUp(KeyCode.A) && !facingRight) || (Input.GetKeyUp(KeyCode.D) && facingRight))
+        if(((Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) && !facingRight) || ((Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow)) && facingRight))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
             anim.SetBool("Running", false);
         }
-        if(Input.GetKeyUp(KeyCode.Space) || Time.time >= jumpPressedTime) 
+        if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) || Time.time >= jumpPressedTime) 
         {
             jump = false;
             //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, deceleration));
         }
-        if(Input.GetKeyDown(KeyCode.LeftControl))
+        if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             anim.SetBool("Crouching", true);
             anim.SetBool("Jumping", false);
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour {
             playerCollider.offset = new Vector2(0, crouchOffset);
             isCrouching = true;
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
         {
             anim.SetBool("Crouching", false);
             playerCollider.size = new Vector2(playerCollider.size.x, standHeight);
