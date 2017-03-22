@@ -50,7 +50,14 @@ public class ChestController : MonoBehaviour {
 
 	public void LoadNextLevel()
 	{
-		SceneManager.LoadScene (gameController.getCurrentLevelIndex() + 2);
+		if (gameController.getCurrentLevelIndex () < 7) 
+		{
+			SceneManager.LoadScene (gameController.getCurrentLevelIndex () + 2);
+		} 
+		else 
+		{
+			SceneManager.LoadScene (0);
+		}
 	}
 
 	IEnumerator LoadNextLevel(float time)
