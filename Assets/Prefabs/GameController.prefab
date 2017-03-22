@@ -67,3 +67,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: {fileID: 0}
+  numberOfLevelsInGame: 8
