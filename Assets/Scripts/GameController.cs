@@ -6,13 +6,13 @@ using System.IO;
 using System;
 
 public class GameController : MonoBehaviour {
-    public GameObject currentLevel;
+	public GameObject currentLevel;
     private GameData data;
-    private int numberOfLevelsInGame = 8;
+    public int numberOfLevelsInGame = 8;
 
 	void Start()
     {
-        Load();
+		Load();
     }
 
     public void Save()
@@ -20,27 +20,17 @@ public class GameController : MonoBehaviour {
 		BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/gameProgress.dat");
 
-        LevelController currentLevelController = currentLevel.GetComponent<LevelController>();
-		LevelData level = new LevelData();
-
-		if (currentLevelController == null) 
+		if (currentLevel != null) 
 		{
-			level.ID = 0;
-			level.hasBeenCompleted = false;
-			level.hasMapPiece = false;
-			level.mapPieceWasFound = false;
+			LevelController currentLevelController = currentLevel.GetComponent<LevelController> ();
+			LevelData level = new LevelData ();
+
+			level.ID = currentLevelController.getID ();
+
+			data.levels [level.ID].hasBeenCompleted = currentLevelController.getHasBeenCompleted ();
+			data.levels [level.ID].hasMapPiece = currentLevelController.gethasMapPiece ();
+			data.levels [level.ID].mapPieceWasFound = currentLevelController.getMapPieceFound ();
 		} 
-		else 
-		{
-			level.ID = currentLevelController.getID();
-			level.hasBeenCompleted = currentLevelController.getHasBeenCompleted();
-			level.hasMapPiece = currentLevelController.gethasMapPiece();
-			level.mapPieceWasFound = currentLevelController.getMapPieceFound();
-		}
-
-        data.levels[level.ID] = level;
-
-        currentLevelController.print();
 
         bf.Serialize(file, data);
         file.Close();
@@ -59,6 +49,15 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	public List<LevelData> getLevels()
+	{
+		if (data == null) 
+		{
+			Load();
+		}
+		return data.levels;
+	}
+
     public void Load()
     {
         if (File.Exists(Application.persistentDataPath + "/gameProgress.dat"))
@@ -67,7 +66,7 @@ public class GameController : MonoBehaviour {
             FileStream file = File.Open(Application.persistentDataPath + "/gameProgress.dat", FileMode.Open);
             data = (GameData)bf.Deserialize(file);
             file.Close();
-        }
+		}
         else
         {
             initializeGameData();
@@ -76,7 +75,7 @@ public class GameController : MonoBehaviour {
 
     private void initializeGameData()
     {
-        data = new GameData();
+		data = new GameData();
         data.levels = new List<LevelData>();
         
         for (int i = 0; i < numberOfLevelsInGame; i++)
@@ -91,13 +90,13 @@ public class GameController : MonoBehaviour {
 }
 
 [Serializable]
-class GameData
+public class GameData
 {
     public List<LevelData> levels;
 } 
 
 [Serializable]
-class LevelData
+public class LevelData
 {
     public int ID;
     public bool hasBeenCompleted;
