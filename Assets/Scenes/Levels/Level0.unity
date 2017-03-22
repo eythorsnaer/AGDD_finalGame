@@ -1773,17 +1773,17 @@ Prefab:
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
@@ -1808,12 +1808,12 @@ Prefab:
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 563
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
@@ -1838,12 +1838,16 @@ Prefab:
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224096410833085744, guid: 6b5468a0f7f24482db4fd7ad07c6737d,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1984775122983104, guid: 6b5468a0f7f24482db4fd7ad07c6737d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b5468a0f7f24482db4fd7ad07c6737d, type: 2}
