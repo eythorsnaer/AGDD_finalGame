@@ -13,7 +13,7 @@ public class LevelController : MonoBehaviour
 
 	public void Start()
 	{
-		if (hasMapPiece) 
+		if (hasMapPiece && mapPieceWasFound) 
 		{
 			mapPiece.SetActive (false);
 		}
@@ -34,6 +34,11 @@ public class LevelController : MonoBehaviour
         return hasBeenCompleted;
     }
 
+	public void completedLevel()
+	{
+		hasBeenCompleted = true;
+	}
+
     public bool gethasMapPiece()
     {
         return hasMapPiece;
@@ -52,6 +57,6 @@ public class LevelController : MonoBehaviour
     public void print()
     {
         string data = "ID: " + ID + ", completed: " + hasBeenCompleted + ", hasMapPiece: " + hasMapPiece + ", mapPieceWasFound: " + mapPieceWasFound;
-        Console.WriteLine(data);
+		Debug.Log(data);
     }
 }

@@ -8,6 +8,7 @@ public class ChestController : MonoBehaviour {
 	private Animator anim;
 	public AudioClip winClip;
 	public GameController gameController;
+	public LevelController level;
 	private float timeUntilLoad = 2;
 	private bool hasWon = false;
 
@@ -30,11 +31,10 @@ public class ChestController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("in trigger");
         if(other.CompareTag("Player")) {
 			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
-			anim.SetBool("openChest", true);
-			Debug.Log("in win trigger");
+			anim.SetBool ("openChest", true);
+			level.completedLevel ();
 			gameController.Save ();
 			hasWon = true;
 		}
