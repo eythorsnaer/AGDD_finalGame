@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 	public GameObject currentLevel;
@@ -47,6 +48,10 @@ public class GameController : MonoBehaviour {
 		{
 			return currentLevel.GetComponent<LevelController> ().getID ();
 		}
+	}
+
+	public void loadSceneByIndex(int i) {
+		SceneManager.LoadScene (i);
 	}
 
 	public LevelData getLevel()
