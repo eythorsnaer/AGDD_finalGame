@@ -3915,6 +3915,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114670045127439322, guid: 99836da93267b41ff9f16a31a9cf64f0,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Esc
+
+        Up Arraow | W
+
+        Left Arraow | A
+
+        Right Arraow | D
+
+        Down Arraow | S | ctrl
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99836da93267b41ff9f16a31a9cf64f0, type: 2}
   m_IsPrefabParent: 0

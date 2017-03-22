@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 		
 	}
 
+
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
 		//grounded = Physics2D.Linecast(transform.position - new Vector3(0, 0.8f, 0), transform.position - new Vector3(0, 1, 0));
 		
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown("Jump") && grounded) {
+		if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && grounded) {
 			jump = true;
 			anim.SetBool("Jumping", true);
 			anim.SetBool("Running", false);
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
             Crouch();
         }
  
-		if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.DownArrow))) {
+		if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.DownArrow))) {
         	StandUp(); 
         }
 
