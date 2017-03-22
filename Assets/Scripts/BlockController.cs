@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour {
 	public enum GravityDirection {UP, DOWN, NONE};
-	public enum BlockType {Falling, Hovering, Static};
+	public enum BlockType {Falling, Hovering, Static, InOut, Icy};
 	public BlockType blockType;
 	public GravityDirection gravityDirection;
 	private bool moving;
