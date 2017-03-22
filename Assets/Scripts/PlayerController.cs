@@ -14,16 +14,27 @@ public class PlayerController : MonoBehaviour {
     private bool isGrounded;
     private float jumpTime = 0;
     private float jumpPressedTime = 0;
-    private float countdown = .3f;
+    private float countdown = .2f;
 
+    private BoxCollider2D playerCollider;
+    private float crouchHeight;
+    private float standHeight;
+    private float crouchOffset;
+    private bool isCrouching;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         canJump = true;
         facingRight = true;
         isGrounded = true;
         anim = GetComponent<Animator>();
-	}
+
+        playerCollider = GetComponent<BoxCollider2D>();
+        standHeight = playerCollider.size.y;
+        crouchHeight = standHeight / 2;
+        crouchOffset = 0.02f;
+        isCrouching = false;
+    }
 
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -35,8 +46,15 @@ public class PlayerController : MonoBehaviour {
 
         if ((Input.GetKeyDown(KeyCode.Space) && isGrounded) || jump)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, deceleration));
+            if(isCrouching)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce / 2);
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
+            }
+            
             if(!jump)
             {
                 jumpTime = Time.time;
@@ -79,12 +97,36 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Space) || Time.time >= jumpPressedTime) 
         {
             jump = false;
+            //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, deceleration));
+        }
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            anim.SetBool("Crouching", true);
+            anim.SetBool("Jumping", false);
+            anim.SetBool("Running", false);
+            playerCollider.size = new Vector2(playerCollider.size.x, crouchHeight);
+            playerCollider.offset = new Vector2(0, crouchOffset);
+            isCrouching = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            anim.SetBool("Crouching", false);
+            playerCollider.size = new Vector2(playerCollider.size.x, standHeight);
+            playerCollider.offset = new Vector2(0, 0);
+            isCrouching = false;
         }
     }
 
     public void Move(float move, bool jump)
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        if (isCrouching)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * (maxSpeed/2), GetComponent<Rigidbody2D>().velocity.y);
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        }
     }
 
     void Flip()
