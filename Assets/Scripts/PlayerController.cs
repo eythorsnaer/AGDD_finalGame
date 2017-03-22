@@ -72,11 +72,11 @@ public class PlayerController : MonoBehaviour
 			anim.SetBool("Running", false);
 		}
 
-		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))) {
+		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.DownArrow))) {
             Crouch();
         }
  
-        if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))) {
+		if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.DownArrow))) {
         	StandUp(); 
         }
 
