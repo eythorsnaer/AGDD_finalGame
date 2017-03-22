@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
  
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
 	public bool facingRight = true;
 	[HideInInspector]
 	public bool jump = false;
+	public LevelController level;
 
 	public float moveForce = 365f;
 	public float maxSpeed = 5f;
@@ -52,6 +54,11 @@ public class PlayerController : MonoBehaviour
 			anim.SetBool("Running", false);
 		} else {
 			anim.SetBool("Jumping", false);
+		}
+
+		if (gameObject.GetComponent<Transform> ().position.y <= -20 || gameObject.GetComponent<Transform> ().position.y >= 20) 
+		{
+			SceneManager.LoadScene (level.ID);
 		}
 	}
 
