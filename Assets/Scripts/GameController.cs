@@ -56,6 +56,15 @@ public class GameController : MonoBehaviour {
 
 	public LevelData getLevel()
 	{
+		if (data == null) 
+		{
+			LevelData level = new LevelData ();
+			level.ID = 0;
+			level.hasBeenCompleted = false;
+			level.hasMapPiece = false;
+			level.mapPieceWasFound = false;
+			return level;
+		}
 		return data.levels [currentLevel.GetComponent<LevelController> ().getID()];
 	}
 
@@ -83,7 +92,7 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    private void initializeGameData()
+    public void initializeGameData()
     {
 		data = new GameData();
         data.levels = new List<LevelData>();

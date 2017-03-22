@@ -17,9 +17,7 @@ public class LevelController : MonoBehaviour
 		LevelData level = gameController.getLevel ();
 
 		this.hasBeenCompleted = level.hasBeenCompleted;
-		this.hasMapPiece = level.hasMapPiece;
 		this.mapPieceWasFound = level.mapPieceWasFound;
-		this.ID = level.ID;
 
 		if (hasMapPiece && mapPieceWasFound) 
 		{

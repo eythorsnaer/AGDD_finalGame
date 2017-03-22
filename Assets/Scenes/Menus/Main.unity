@@ -4473,7 +4473,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1219181949}
-        m_MethodName: Save
+        m_MethodName: initializeGameData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
