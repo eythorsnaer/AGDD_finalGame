@@ -1,142 +1,142 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+ 
+public class PlayerController : MonoBehaviour
+{
+	[HideInInspector]
+	public bool facingRight = true;
+	[HideInInspector]
+	public bool jump = false;
 
-public class PlayerController : MonoBehaviour {
+	public float moveForce = 365f;
+	public float maxSpeed = 5f;
+	public AudioClip[] jumpClips;
+	public float jumpForce = 1000f;
 
-    private bool facingRight;
-    private bool jump;
-    private bool canJump;
-    private float maxSpeed = 3f;
-    private float jumpForce = 10f;
-    private float deceleration = -100f;
-    private Animator anim;
-    private bool isGrounded;
-    private float jumpTime = 0;
-    private float jumpPressedTime = 0;
-    private float countdown = .2f;
+	private Transform groundCheck;
+	private bool grounded = false;
+	private bool crouching = false;
+	private Animator anim;
 
-    private CapsuleCollider2D playerCollider;
+	private CapsuleCollider2D playerCollider;
     private float crouchHeight;
     private float standHeight;
     private float crouchOffset;
-    private bool isCrouching;
 
-    // Use this for initialization
-    void Start () {
-        canJump = true;
-        facingRight = true;
-        isGrounded = true;
-        anim = GetComponent<Animator>();
+	void Awake()
+	{
+		groundCheck = transform.Find("groundCheck");
+		anim = GetComponent<Animator>();
+		playerCollider = GetComponent<CapsuleCollider2D>();
 
-        playerCollider = GetComponent<CapsuleCollider2D>();
-        standHeight = playerCollider.size.y;
-        crouchHeight = standHeight / 2;
-        crouchOffset = 0.02f;
-        isCrouching = false;
-    }
+		standHeight = playerCollider.size.y;
+		crouchHeight = standHeight/2;
+		crouchOffset = 0.02f;
+		
+	}
 
-	// Update is called once per frame
-	void FixedUpdate () {
-        isGrounded = Physics2D.Linecast(transform.position - new Vector3(0, .65f, 0), transform.position - new Vector3(0, .8f, 0));
-        if(isGrounded)
-        {
-            anim.SetBool("Jumping", false);
+	void Update()
+	{
+		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+		//grounded = Physics2D.OverlapCircle(groundCheck.position, 1, 1 << LayerMask.NameToLayer("Ground"));
+
+		grounded = Physics2D.Linecast(transform.position - new Vector3(0, 0.8f, 0), transform.position - new Vector3(0, 1, 0));
+		
+		// If the jump button is pressed and the player is grounded then the player should jump.
+		if(Input.GetButtonDown("Jump") && grounded) {
+			jump = true;
+			anim.SetBool("Jumping", true);
+			anim.SetBool("Running", false);
+		} else if (!grounded) {
+			anim.SetBool("Jumping", true);
+			anim.SetBool("Running", false);
+		} else {
+			anim.SetBool("Jumping", false);
+		}
+	}
+
+	void FixedUpdate ()
+	{
+		float h = Input.GetAxis("Horizontal");
+
+		if (h >= 0.1 || h <= -0.1) {
+			anim.SetBool("Running", true);
+		} else {
+			anim.SetBool("Running", false);
+		}
+
+		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))) {
+            Crouch();
+        }
+ 
+        if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))) {
+        	StandUp(); 
         }
 
-        if (((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded) || jump)
-        {
-            if(isCrouching)
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce / 2);
-            }
-            else
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
-            }
-            
-            if(!jump)
-            {
-                jumpTime = Time.time;
-                jumpPressedTime = jumpTime + countdown;
-            }
-            jump = true;
-            anim.SetBool("Jumping", true);
-            anim.SetBool("Running", false);
-        }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            Move(-1f, jump);
-            if(facingRight)
-            {
-                Flip();
-            }
-            if(isGrounded)
-            {
-                anim.SetBool("Running", true);
-            }
-            
-        }
-        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            Move(1f, jump);
-            if (!facingRight)
-            {
-                Flip();
-            }
-            if (isGrounded)
-            {
-                anim.SetBool("Running", true);
-            }
-        }
-        if(((Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) && !facingRight) || ((Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow)) && facingRight))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
-            anim.SetBool("Running", false);
-        }
-        if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) || Time.time >= jumpPressedTime) 
-        {
-            jump = false;
-            //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, deceleration));
-        }
-        if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            anim.SetBool("Crouching", true);
-            anim.SetBool("Jumping", false);
-            anim.SetBool("Running", false);
-            playerCollider.size = new Vector2(playerCollider.size.x, crouchHeight);
-            playerCollider.offset = new Vector2(0, crouchOffset);
-            isCrouching = true;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            anim.SetBool("Crouching", false);
-            playerCollider.size = new Vector2(playerCollider.size.x, standHeight);
-            playerCollider.offset = new Vector2(0, 0);
-            isCrouching = false;
-        }
-    }
+		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
+		if(h * GetComponent<Rigidbody2D>().velocity.x <= maxSpeed) {
+			GetComponent<Rigidbody2D>().velocity = new Vector2(moveForce * h * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);//AddForce(Vector2.right * h * moveForce);
+		}
 
-    public void Move(float move, bool jump)
-    {
-        if (isCrouching)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(move * (maxSpeed/2), GetComponent<Rigidbody2D>().velocity.y);
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        }
-    }
+		// If the player's horizontal velocity is greater than the maxSpeed...
+		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed) {
+			// ... set the player's velocity to the maxSpeed in the x axis.
+			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
 
-    void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        facingRight = !facingRight;
+		// If the input is moving the player right and the player is facing left...
+		if(h > 0 && !facingRight) {
+			Flip();
+		}
+		// Otherwise if the input is moving the player left and the player is facing right...
+		else if(h < 0 && facingRight) {
+			Flip();
+		}
 
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
+		// If the player should jump...
+		if(jump) {
+			// Play a random jump audio clip.
+			int i = Random.Range(0, jumpClips.Length);
+			AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+
+			// Add a vertical force to the player.
+			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);//.AddForce(new Vector2(0f, jumpForce));
+
+			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
+			jump = false;
+		}
+
+	}
+	
+	
+	void Flip ()
+	{
+		// Switch the way the player is labelled as facing.
+		facingRight = !facingRight;
+
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
+
+	void Crouch() {
+		crouching = true;
+		anim.SetBool("Crouching", true);
+		anim.SetBool("Jumping", false);
+		anim.SetBool("Running", false);
+
+        playerCollider.size = new Vector2 (playerCollider.size.x, crouchHeight);
+        playerCollider.offset = new Vector2 (0, crouchOffset);
+	}
+
+	void StandUp () {
+		crouching = false;
+		anim.SetBool("Crouching", false);
+
+		playerCollider.size = new Vector2 (playerCollider.size.x, standHeight);
+        playerCollider.offset = new Vector2 (0, 0);
+	}
 }
