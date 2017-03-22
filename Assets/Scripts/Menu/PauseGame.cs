@@ -23,6 +23,8 @@ public class PauseGame : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
 			Pause ();
+		} else if (Input.GetKeyDown (KeyCode.R)) {
+			 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
 	}
 

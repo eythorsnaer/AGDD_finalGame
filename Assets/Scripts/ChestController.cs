@@ -39,11 +39,12 @@ public class ChestController : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
 			anim.SetBool ("openChest", true);
 			level.completedLevel ();
-			gameController.Save ();
+			//gameController.Save ();
 			hasWon = true;
 			player.GetComponent<PlayerController>().enabled = false;
 			winMenu.gameObject.SetActive (true);
-			gameController.Save ();
+
+			//gameController.Save ();
 			//StartCoroutine(LoadNextLevel(timeUntilLoad));
 		}
     }
