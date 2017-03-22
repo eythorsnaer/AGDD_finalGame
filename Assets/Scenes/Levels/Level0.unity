@@ -1614,6 +1614,11 @@ Prefab:
       propertyPath: ID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114908453469592822, guid: 8088ff011d177814aa789b0d00f951dc,
+        type: 2}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1767559835}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8088ff011d177814aa789b0d00f951dc, type: 2}
   m_IsPrefabParent: 0
@@ -2542,6 +2547,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114783788490371048, guid: 634ad96fe59344f2694d96e114cfb9b4,
+        type: 2}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 800980315}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634ad96fe59344f2694d96e114cfb9b4, type: 2}
   m_IsPrefabParent: 0
