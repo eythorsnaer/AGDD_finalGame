@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChestController : MonoBehaviour {
-
+	public GameController gameController;
 	private Animator anim;
 	public AudioClip winClip;
 
@@ -18,6 +18,12 @@ public class ChestController : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
 			anim.SetBool("openChest", true);
 			Debug.Log("in win trigger");
+
+			
 		}
+
+
+
+		//gameController.Save();
     }
 }
