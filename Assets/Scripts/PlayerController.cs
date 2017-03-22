@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
     private float jumpPressedTime = 0;
     private float countdown = .2f;
 
-    private BoxCollider2D playerCollider;
+    private CapsuleCollider2D playerCollider;
     private float crouchHeight;
     private float standHeight;
     private float crouchOffset;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
         isGrounded = true;
         anim = GetComponent<Animator>();
 
-        playerCollider = GetComponent<BoxCollider2D>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
         standHeight = playerCollider.size.y;
         crouchHeight = standHeight / 2;
         crouchOffset = 0.02f;
