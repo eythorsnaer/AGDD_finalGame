@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseGame : MonoBehaviour {
-	/*
+	[SerializeField]
 	public Transform canvas;
-	public Transform player;
-	public Transform planet;
+
+	private Transform player;
+	[SerializeField]
 	public Transform pauseMenu;
+	[SerializeField]
 	public Transform controlsMenu;
+
+	void Start() {
+		player = GameObject.FindGameObjectWithTag("Player").transform;
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -28,15 +34,10 @@ public class PauseGame : MonoBehaviour {
 			canvas.gameObject.SetActive (true);
 			Time.timeScale = 0;
 			player.GetComponent<PlayerController> ().enabled = false;
-			player.GetComponent<GravityBody> ().enabled = false;
-			planet.GetComponent<GravityAttractor> ().enabled = false;
-
 		} else {
 			canvas.gameObject.SetActive (false);
 			Time.timeScale = 1;
 			player.GetComponent<PlayerController> ().enabled = true;
-			player.GetComponent<GravityBody> ().enabled = true;
-			planet.GetComponent<GravityAttractor> ().enabled = true;
 		}
 	}
 
@@ -58,5 +59,4 @@ public class PauseGame : MonoBehaviour {
 			pauseMenu.gameObject.SetActive (true);
 		}
 	}
-	*/
 }

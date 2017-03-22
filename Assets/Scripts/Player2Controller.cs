@@ -19,7 +19,7 @@ public class Player2Controller : MonoBehaviour
 	private bool crouching = false;
 	private Animator anim;
 
-	private BoxCollider2D playerCollider;
+	private CapsuleCollider2D playerCollider;
     private float crouchHeight;
     private float standHeight;
     private float crouchOffset;
@@ -28,7 +28,7 @@ public class Player2Controller : MonoBehaviour
 	{
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
-		playerCollider = GetComponent<BoxCollider2D>();
+		playerCollider = GetComponent<CapsuleCollider2D>();
 
 		standHeight = playerCollider.size.y;
 		crouchHeight = standHeight/2;
@@ -73,8 +73,8 @@ public class Player2Controller : MonoBehaviour
         }
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed) {
-			GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+		if(h * GetComponent<Rigidbody2D>().velocity.x <= maxSpeed) {
+			GetComponent<Rigidbody2D>().velocity = new Vector2(moveForce * h * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);//AddForce(Vector2.right * h * moveForce);
 		}
 
 		// If the player's horizontal velocity is greater than the maxSpeed...
@@ -99,7 +99,7 @@ public class Player2Controller : MonoBehaviour
 			AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
 
 			// Add a vertical force to the player.
-			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);//.AddForce(new Vector2(0f, jumpForce));
 
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;

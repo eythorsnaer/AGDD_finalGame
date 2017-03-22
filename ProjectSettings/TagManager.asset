@@ -13,9 +13,13 @@ TagManager:
   - BombPickup
   - ExplosionFX
   - HealthBar
+<<<<<<< HEAD
   - LevelButton
   - CheckMark
   - MapPieceUI
+=======
+  - LevelController
+>>>>>>> origin/master
   layers:
   - Default
   - TransparentFX

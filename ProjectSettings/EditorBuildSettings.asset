@@ -9,9 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level.unity
   - enabled: 1
     path: Assets/Scenes/Menus/Main.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Level0.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Level1.unity
+  - enabled: 1
+    path: Assets/Scenes/Testing/eythor.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity
