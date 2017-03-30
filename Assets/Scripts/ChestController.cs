@@ -43,7 +43,9 @@ public class ChestController : MonoBehaviour {
 			hasWon = true;
 			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			player.GetComponent<PlayerController>().enabled = false;
-			winMenu.gameObject.SetActive (true);
+            player.GetComponent<Animator>().SetBool("Running", false);
+            player.GetComponent<Animator>().SetBool("Jumping", false);
+            winMenu.gameObject.SetActive (true);
 
 			gameController.Save ();
 			//StartCoroutine(LoadNextLevel(timeUntilLoad));
