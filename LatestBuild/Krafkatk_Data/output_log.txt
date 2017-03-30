@@ -1,0 +1,128 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 21.21.13.7878]
+    Renderer: NVIDIA GeForce GTX 960M
+    Vendor:   NVIDIA
+    VRAM:     3072 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 NULL=1 RESZ=0 SlowINTZ=0 ATOC=1 BC4=1 BC5=1
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.151 seconds
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 1.267359 ms
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 7.141141 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 829.
+Total: 0.901136 ms (FindLiveObjects: 0.132740 ms CreateObjectMapping: 0.033975 ms MarkObjects: 0.684642 ms  DeleteObjects: 0.049382 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 0.740346 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.357531 ms (FindLiveObjects: 0.090074 ms CreateObjectMapping: 0.022518 ms MarkObjects: 0.231506 ms  DeleteObjects: 0.013037 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+NullReferenceException: Object reference not set to an instance of an object
+  at MapPieceController.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+NullReferenceException: Object reference not set to an instance of an object
+  at MapPieceController.OnTriggerEnter2D (UnityEngine.Collider2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.416395 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.552296 ms (FindLiveObjects: 0.069530 ms CreateObjectMapping: 0.022123 ms MarkObjects: 0.441679 ms  DeleteObjects: 0.018172 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+NullReferenceException: Object reference not set to an instance of an object
+  at MapPieceController.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+NullReferenceException: Object reference not set to an instance of an object
+  at MapPieceController.OnTriggerEnter2D (UnityEngine.Collider2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at MapPieceController.OnTriggerEnter2D (UnityEngine.Collider2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.658568 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.597728 ms (FindLiveObjects: 0.171061 ms CreateObjectMapping: 0.025283 ms MarkObjects: 0.380839 ms  DeleteObjects: 0.020148 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+NullReferenceException: Object reference not set to an instance of an object
+  at MapPieceController.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: ba0 -> priority: 1 
+  Thread -> id: b04 -> priority: 1 

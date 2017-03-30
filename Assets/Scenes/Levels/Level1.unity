@@ -879,6 +879,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114323721543464842, guid: 0b9cb65bd74892a488df188855770d35,
+        type: 2}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 478059137}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
   m_IsPrefabParent: 0
@@ -1027,6 +1032,12 @@ MonoBehaviour:
   blockType: 2
   gravityDirection: 2
   fallDelay: 0
+--- !u!114 &478059137 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114938248152938522, guid: 411f53862ae7249fc8e0138d332026cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1729096951}
+  m_Script: {fileID: 11500000, guid: 1411e73ecba4ed54fac287d206b54a17, type: 3}
 --- !u!1001 &507821089
 Prefab:
   m_ObjectHideFlags: 0
