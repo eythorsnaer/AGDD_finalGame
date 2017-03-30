@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0f7bc33f789204ad49461ae5d05d32f2
+timeCreated: 1490576862
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SF Theramin Gothic
+  fontNames:
+  - SF Theramin Gothic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

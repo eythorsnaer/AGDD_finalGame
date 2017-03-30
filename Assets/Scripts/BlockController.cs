@@ -30,6 +30,9 @@ public class BlockController : MonoBehaviour {
 			string path = "Sprites/Environment/Blocks/StaticBlock" + spriteNumber.ToString ();
 			gameObject.GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite> (path);
 		}
+		else if (blockType == BlockType.Icy) {
+			
+		}
 	}
 
 	// Update is called once per frame

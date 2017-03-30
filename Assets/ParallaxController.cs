@@ -6,14 +6,17 @@ public class ParallaxController : MonoBehaviour {
 
 	public float speed;
 	Transform target;
-	float offset;
+	float offsetX;
+	float offsetY;
 
 	void Start() {
-		offset = 0;
+		offsetX = 0;
+		offsetY = 0;
 		target = Camera.main.transform;
 	}
 	void Update () {
-		offset = target.position.x * speed;
-		GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+		offsetX = target.position.x * speed;
+		offsetY = target.position.y * speed*3;
+		GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(offsetX, offsetY));
 	}
 }

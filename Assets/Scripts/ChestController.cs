@@ -38,13 +38,14 @@ public class ChestController : MonoBehaviour {
         if(other.CompareTag("Player")) {
 			AudioSource.PlayClipAtPoint(winClip, other.transform.position);
 			anim.SetBool ("openChest", true);
-			level.completedLevel ();
-			//gameController.Save ();
+			level.completedLevel();
+			gameController.Save ();
 			hasWon = true;
+			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			player.GetComponent<PlayerController>().enabled = false;
 			winMenu.gameObject.SetActive (true);
 
-			//gameController.Save ();
+			gameController.Save ();
 			//StartCoroutine(LoadNextLevel(timeUntilLoad));
 		}
     }

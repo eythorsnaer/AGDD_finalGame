@@ -22,13 +22,13 @@ public class PauseGame : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
-			Pause ();
+			PauseResume ();
 		} else if (Input.GetKeyDown (KeyCode.R)) {
 			 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
 	}
 
-	public void Pause() {
+	public void PauseResume() {
 		if (canvas.gameObject.activeInHierarchy == false) {
 			if (pauseMenu.gameObject.activeInHierarchy == false) {
 				pauseMenu.gameObject.SetActive (true);
@@ -54,7 +54,7 @@ public class PauseGame : MonoBehaviour {
 		}
 	}
 
-	public void Exit() {
+	public void ExitToMainMenu() {
 		SceneManager.LoadScene (0);
 		//Application.Quit();
 		//UnityEditor.EditorApplication.isPlaying = false;
@@ -64,13 +64,8 @@ public class PauseGame : MonoBehaviour {
 		BackgroundMusic.Instance.Mute (); 
 	}
 
-	public void Controls(bool Open) {
-		if (Open) {
-			controlsMenu.gameObject.SetActive (true);
-			pauseMenu.gameObject.SetActive (false);
-		} else {
-			controlsMenu.gameObject.SetActive (false);
-			pauseMenu.gameObject.SetActive (true);
-		}
+	public void ControlsMenu() {
+		controlsMenu.gameObject.SetActive (true);
+		pauseMenu.gameObject.SetActive (false);
 	}
 }
