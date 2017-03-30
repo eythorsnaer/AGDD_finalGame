@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 	public AudioClip[] jumpClips;
 	public float jumpForce;
 	public AudioClip fallClip;
+	public int yMin;
 
 	private Transform groundCheck;
 	private bool grounded = false;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private float crouchOffset;
 
 	private bool isRestarting;
+	private bool wallE;
 
 	void Awake()
 	{
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.OverlapCircle(groundCheck.position, 0.7f, 1 << LayerMask.NameToLayer("Ground"));
-		//grounded = Physics2D.Linecast(transform.position - new Vector3(0, 0.8f, 0), transform.position - new Vector3(0, 1, 0));
+		wallE = Physics2D.OverlapCircle(transform.position, 0.35f, 1 << LayerMask.NameToLayer("Wall"));
 		
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && grounded) {
@@ -68,11 +70,11 @@ public class PlayerController : MonoBehaviour
         	StandUp(); 
         }
 
-		if (!isRestarting && (gameObject.GetComponent<Transform> ().position.y <= -20 || gameObject.GetComponent<Transform> ().position.y >= 20))
+		if (!isRestarting && (gameObject.GetComponent<Transform> ().position.y <= yMin))
 		{
 			isRestarting = true;
 			AudioSource.PlayClipAtPoint(fallClip, transform.position);
-			StartCoroutine(waitAndRestart(1));
+			StartCoroutine(waitAndRestart(0.8f));
 		}
 	}
 
@@ -152,7 +154,7 @@ public class PlayerController : MonoBehaviour
         playerCollider.offset = new Vector2 (0, 0);
 	}
 
-	IEnumerator waitAndRestart(int s) {
+	IEnumerator waitAndRestart(float s) {
         yield return new WaitForSeconds(s);
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
     }

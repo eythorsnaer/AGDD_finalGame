@@ -7,6 +7,13 @@ TagManager:
   - CheckMark
   - MapPieceUI
   - LevelButton
+  - Enemy
+  - ExplosionFX
+  - Bullet
+  - ground
+  - Obstacle
+  - HealthBar
+  - BombPickup
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Wall
   - 
   - 
   - 
