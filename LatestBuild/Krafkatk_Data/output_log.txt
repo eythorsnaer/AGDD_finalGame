@@ -17,7 +17,7 @@ Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Manag
 Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.139 seconds
+- Completed reload, in  2.099 seconds
 Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -26,8 +26,7 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
-UnloadTime: 1.139753 ms
-WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 1.300939 ms
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
@@ -36,12 +35,85 @@ Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
-UnloadTime: 5.373238 ms
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 5.822424 ms
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 829.
-Total: 0.473679 ms (FindLiveObjects: 0.087703 ms CreateObjectMapping: 0.057283 ms MarkObjects: 0.314074 ms  DeleteObjects: 0.013432 ms)
+Total: 0.429827 ms (FindLiveObjects: 0.041876 ms CreateObjectMapping: 0.024098 ms MarkObjects: 0.329876 ms  DeleteObjects: 0.033580 ms)
 
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 0.813432 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.379654 ms (FindLiveObjects: 0.076642 ms CreateObjectMapping: 0.023703 ms MarkObjects: 0.263111 ms  DeleteObjects: 0.015012 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.413234 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.391901 ms (FindLiveObjects: 0.044246 ms CreateObjectMapping: 0.041086 ms MarkObjects: 0.288000 ms  DeleteObjects: 0.017382 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.387555 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.346074 ms (FindLiveObjects: 0.081777 ms CreateObjectMapping: 0.021728 ms MarkObjects: 0.227950 ms  DeleteObjects: 0.013827 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.552296 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 913.
+Total: 0.577975 ms (FindLiveObjects: 0.090469 ms CreateObjectMapping: 0.079407 ms MarkObjects: 0.391901 ms  DeleteObjects: 0.015407 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.674765 ms
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 1191.
+Total: 0.344889 ms (FindLiveObjects: 0.060444 ms CreateObjectMapping: 0.022518 ms MarkObjects: 0.246518 ms  DeleteObjects: 0.015012 ms)
+
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
@@ -50,5 +122,5 @@ WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 WARNING: BC6H/BC7 texture format is not supported, decompressing texture
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 804 -> priority: 1 
-  Thread -> id: 1594 -> priority: 1 
+  Thread -> id: 5d0 -> priority: 1 
+  Thread -> id: 23c8 -> priority: 1 

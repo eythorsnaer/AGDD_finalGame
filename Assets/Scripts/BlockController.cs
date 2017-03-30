@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour {
 	public enum GravityDirection {UP, DOWN, NONE};
-	public enum BlockType {Falling, Hovering, Static, InOut, Icy};
+	public enum BlockType {Falling, Hovering, Static, Bouncing, InOut, Icy};
 	public BlockType blockType;
 	public GravityDirection gravityDirection;
 	private bool moving;
@@ -33,16 +33,20 @@ public class BlockController : MonoBehaviour {
 		else if (blockType == BlockType.Icy) {
 			
 		}
+		else if (blockType == BlockType.Bouncing)
+		{
+
+		}
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		if (blockType != BlockType.Static && !hasGravity && moving && fallDelay > 0) 
+		if (gravityDirection != GravityDirection.NONE && !hasGravity && moving && fallDelay > 0) 
 		{
 			fallDelay -= Time.deltaTime;
 		} 
-		else if (blockType != BlockType.Static && !hasGravity && moving && fallDelay <= 0) 
+		else if (gravityDirection != GravityDirection.NONE && !hasGravity && moving && fallDelay <= 0) 
 		{
 			hasGravity = true;
 			if (gravityDirection.Equals(GravityDirection.DOWN))
@@ -57,11 +61,11 @@ public class BlockController : MonoBehaviour {
 			gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezeRotation;
 		}
 
-		if (blockType != BlockType.Static && gameObject.GetComponent<Transform> ().position.y <= OFF_SCREEN_Y_POSITION_LOWER) 
+		if (gravityDirection != GravityDirection.NONE && gameObject.GetComponent<Transform> ().position.y <= OFF_SCREEN_Y_POSITION_LOWER) 
 		{
 			Destroy (gameObject);
 		} 
-		else if (blockType != BlockType.Static && gameObject.GetComponent<Transform> ().position.y >= OFF_SCREEN_Y_POSITION_UPPER) 
+		else if (gravityDirection != GravityDirection.NONE && gameObject.GetComponent<Transform> ().position.y >= OFF_SCREEN_Y_POSITION_UPPER) 
 		{
 			Destroy (gameObject);
 		}
@@ -69,7 +73,7 @@ public class BlockController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (blockType != BlockType.Static) 
+		if (gravityDirection != GravityDirection.NONE) 
 		{
 			moving = true;
 		}
