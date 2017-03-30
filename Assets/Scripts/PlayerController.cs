@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 	public float jumpForce;
 	public AudioClip fallClip;
 	public int yMin;
+	public float icySpeed;
 
 	private Transform groundCheck;
 	private bool grounded = false;
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private float crouchOffset;
 
 	private bool isRestarting;
-	private bool wallE;
+	private bool onIce;
 
 	void Awake()
 	{
@@ -48,10 +49,10 @@ public class PlayerController : MonoBehaviour
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.1f), 0, 1 << LayerMask.NameToLayer("Ground"));
-		wallE = Physics2D.OverlapCircle(transform.position, 0.35f, 1 << LayerMask.NameToLayer("Wall"));
+		onIce = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.1f), 0, 1 << LayerMask.NameToLayer("Ice"));
 		
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && grounded) {
+		if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && (grounded || onIce)) {
 			jump = true;
 			anim.SetBool("Jumping", true);
 			anim.SetBool("Running", false);
@@ -87,16 +88,23 @@ public class PlayerController : MonoBehaviour
 		} else {
 			anim.SetBool("Running", false);
 		}
-
-		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * GetComponent<Rigidbody2D>().velocity.x <= maxSpeed) {
-			GetComponent<Rigidbody2D>().velocity = new Vector2(moveForce * h * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);//AddForce(Vector2.right * h * moveForce);
+		if (onIce) {
+				Vector3 movement = new Vector3(h * icySpeed, 0, 0);
+				GetComponent<Rigidbody2D>().AddForce (movement * moveForce * Time.deltaTime);
+				GetComponent<Rigidbody2D>().AddTorque(moveForce * h, ForceMode2D.Force);
 		}
+		else {
+			// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
+			if(h * GetComponent<Rigidbody2D>().velocity.x <= maxSpeed) {
+				GetComponent<Rigidbody2D>().velocity = new Vector2(moveForce * h * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);//AddForce(Vector2.right * h * moveForce);
+				
+			}
 
-		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed) {
-			// ... set the player's velocity to the maxSpeed in the x axis.
-			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			// If the player's horizontal velocity is greater than the maxSpeed...
+			if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed) {
+				// ... set the player's velocity to the maxSpeed in the x axis.
+				GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			}
 		}
 
 		// If the input is moving the player right and the player is facing left...
@@ -158,4 +166,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(s);
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
     }
+
 }

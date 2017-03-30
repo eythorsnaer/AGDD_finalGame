@@ -13,7 +13,7 @@ TagManager:
   - ground
   - Obstacle
   - HealthBar
-  - BombPickup
+  - IceBlock
   layers:
   - Default
   - TransparentFX
@@ -24,7 +24,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Wall
+  - Ice
   - 
   - 
   - 
