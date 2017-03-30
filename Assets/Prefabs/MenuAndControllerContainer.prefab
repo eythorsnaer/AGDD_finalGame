@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: {fileID: 1236611018832536}
-  numberOfLevelsInGame: 8
+  numberOfLevelsInGame: 16
 --- !u!114 &114232210185647928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3753,6 +3753,7 @@ MonoBehaviour:
   jumpForce: 12
   fallClip: {fileID: 8300000, guid: 329e421b092904a129984c77d0a86b3f, type: 3}
   yMin: -10
+  icySpeed: 0
 --- !u!114 &114878818592001964
 MonoBehaviour:
   m_ObjectHideFlags: 1
