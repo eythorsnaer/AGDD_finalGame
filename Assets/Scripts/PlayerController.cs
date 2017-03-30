@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 	public float maxSpeed = 5f;
 	public AudioClip[] jumpClips;
 	public float jumpForce;
+	public AudioClip fallClip;
 
 	private Transform groundCheck;
 	private bool grounded = false;
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private float standHeight;
     private float crouchOffset;
 
+	private bool isRestarting;
+
 	void Awake()
 	{
 		groundCheck = transform.Find("groundCheck");
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
 		standHeight = playerCollider.size.y;
 		crouchHeight = standHeight/2;
 		crouchOffset = 0.02f;
+		isRestarting = false;
 	}
 
 
@@ -64,9 +68,11 @@ public class PlayerController : MonoBehaviour
         	StandUp(); 
         }
 
-		if (gameObject.GetComponent<Transform> ().position.y <= -20 || gameObject.GetComponent<Transform> ().position.y >= 20) 
+		if (!isRestarting && (gameObject.GetComponent<Transform> ().position.y <= -20 || gameObject.GetComponent<Transform> ().position.y >= 20))
 		{
-			SceneManager.LoadScene (level.ID + 1);
+			isRestarting = true;
+			AudioSource.PlayClipAtPoint(fallClip, transform.position);
+			StartCoroutine(waitAndRestart(1));
 		}
 	}
 
@@ -145,4 +151,9 @@ public class PlayerController : MonoBehaviour
 		playerCollider.size = new Vector2 (playerCollider.size.x, standHeight);
         playerCollider.offset = new Vector2 (0, 0);
 	}
+
+	IEnumerator waitAndRestart(int s) {
+        yield return new WaitForSeconds(s);
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+    }
 }
