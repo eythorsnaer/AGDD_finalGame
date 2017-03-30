@@ -840,58 +840,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4412940671155524, guid: 92cedcbd60ddec245a7b6c1daada2495,
     type: 2}
   m_PrefabInternal: {fileID: 393777314}
---- !u!1001 &417098299
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1729096952}
-    m_Modifications:
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 13.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432595873908132, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323721543464842, guid: 0b9cb65bd74892a488df188855770d35,
-        type: 2}
-      propertyPath: level
-      value: 
-      objectReference: {fileID: 478059137}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0b9cb65bd74892a488df188855770d35, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &417098300 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1625531880270780, guid: 0b9cb65bd74892a488df188855770d35,
-    type: 2}
-  m_PrefabInternal: {fileID: 417098299}
 --- !u!1001 &419927284
 Prefab:
   m_ObjectHideFlags: 0
@@ -1032,12 +980,6 @@ MonoBehaviour:
   blockType: 2
   gravityDirection: 2
   fallDelay: 0
---- !u!114 &478059137 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114938248152938522, guid: 411f53862ae7249fc8e0138d332026cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1729096951}
-  m_Script: {fileID: 11500000, guid: 1411e73ecba4ed54fac287d206b54a17, type: 3}
 --- !u!1001 &507821089
 Prefab:
   m_ObjectHideFlags: 0
@@ -2699,7 +2641,7 @@ Prefab:
         type: 2}
       propertyPath: mapPiece
       value: 
-      objectReference: {fileID: 417098300}
+      objectReference: {fileID: 1729096952}
     - target: {fileID: 4569410929985960, guid: 411f53862ae7249fc8e0138d332026cc, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.151
@@ -2750,12 +2692,20 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4086579431712150, guid: 411f53862ae7249fc8e0138d332026cc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086579431712150, guid: 411f53862ae7249fc8e0138d332026cc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 411f53862ae7249fc8e0138d332026cc, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1729096952 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4214515502351988, guid: 411f53862ae7249fc8e0138d332026cc,
+--- !u!1 &1729096952 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1404114512925352, guid: 411f53862ae7249fc8e0138d332026cc,
     type: 2}
   m_PrefabInternal: {fileID: 1729096951}
 --- !u!1001 &1742352399
