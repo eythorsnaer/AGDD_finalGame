@@ -1695,7 +1695,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627609813352384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9381442, y: 5.222633, z: -3.5615625}
+  m_LocalPosition: {x: 1.31, y: -0.08, z: -3.5615625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4888480156518182}
@@ -1766,7 +1766,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442309945394704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.31, y: -1.83, z: -3.5615625}
+  m_LocalPosition: {x: 4.67, y: 2.81, z: -3.5615625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4214515502351988}
@@ -2588,7 +2588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Kraftkat!!!!!
+  m_Text: Krafkatk!!!!!
 --- !u!114 &114026241803324936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3722,7 +3722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1411e73ecba4ed54fac287d206b54a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 6
   hasMapPiece: 0
   mapPiece: {fileID: 0}
   gameController: {fileID: 114132117898977554}
