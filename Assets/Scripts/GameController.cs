@@ -94,8 +94,6 @@ public class GameController : MonoBehaviour {
 
     public void initializeGameData()
     {
-		Debug.Log("init: " + numberOfLevelsInGame);
-
 		data = new GameData();
         data.levels = new List<LevelData>();
         

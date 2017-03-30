@@ -36,8 +36,6 @@ public class LevelSelection : MonoBehaviour {
 			}
 		}
 
-		Debug.Log(data.Count);
-		
 		foreach (LevelData level in data)
 		{
 			foreach (Transform child in buttons[level.ID].transform) 
