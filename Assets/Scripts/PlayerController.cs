@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 	private bool isRestarting;
 	private bool onIce;
 
+	
+
 	void Awake()
 	{
 		groundCheck = transform.Find("groundCheck");
@@ -42,15 +44,18 @@ public class PlayerController : MonoBehaviour
 		crouchHeight = standHeight/2;
 		crouchOffset = 0.02f;
 		isRestarting = false;
+
 	}
 
 
 	void Update()
 	{
+
+		
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
 		grounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.1f), 0, 1 << LayerMask.NameToLayer("Ground"));
 		onIce = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.1f), 0, 1 << LayerMask.NameToLayer("Ice"));
-		
+
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && (grounded || onIce)) {
 			jump = true;
@@ -63,10 +68,10 @@ public class PlayerController : MonoBehaviour
 			anim.SetBool("Jumping", false);
 		}
 
+
 		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.DownArrow))) {
-            Crouch();
+			Crouch();
         }
- 
 		if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.DownArrow))) {
         	StandUp(); 
         }
@@ -91,7 +96,7 @@ public class PlayerController : MonoBehaviour
 		if (onIce) {
 				Vector3 movement = new Vector3(h * icySpeed, 0, 0);
 				GetComponent<Rigidbody2D>().AddForce (movement * moveForce * Time.deltaTime);
-				GetComponent<Rigidbody2D>().AddTorque(moveForce * h, ForceMode2D.Force);
+				//GetComponent<Rigidbody2D>().AddTorque(moveForce * h, ForceMode2D.Force);
 		}
 		else {
 			// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
@@ -157,7 +162,6 @@ public class PlayerController : MonoBehaviour
 	void StandUp () {
 		crouching = false;
 		anim.SetBool("Crouching", false);
-
 		playerCollider.size = new Vector2 (playerCollider.size.x, standHeight);
         playerCollider.offset = new Vector2 (0, 0);
 	}
