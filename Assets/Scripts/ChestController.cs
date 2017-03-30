@@ -54,7 +54,7 @@ public class ChestController : MonoBehaviour {
 
 	public void LoadNextLevel()
 	{
-		if (gameController.getCurrentLevelIndex () < 7) 
+		if (gameController.getCurrentLevelIndex () < 15) 
 		{
 			SceneManager.LoadScene (gameController.getCurrentLevelIndex () + 2);
 		} 

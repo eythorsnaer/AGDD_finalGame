@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 	public GameObject currentLevel;
     private GameData data;
-    public int numberOfLevelsInGame = 8;
+    private int numberOfLevelsInGame = 16;
 
 	void Start()
     {
@@ -94,6 +94,8 @@ public class GameController : MonoBehaviour {
 
     public void initializeGameData()
     {
+		Debug.Log("init: " + numberOfLevelsInGame);
+
 		data = new GameData();
         data.levels = new List<LevelData>();
         
