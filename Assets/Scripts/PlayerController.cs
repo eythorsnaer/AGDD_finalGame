@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
 		standHeight = playerCollider.size.y;
 		crouchHeight = standHeight/2;
 		crouchOffset = 0.02f;
-		
 	}
 
 
@@ -57,6 +56,14 @@ public class PlayerController : MonoBehaviour
 			anim.SetBool("Jumping", false);
 		}
 
+		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.DownArrow))) {
+            Crouch();
+        }
+ 
+		if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.DownArrow))) {
+        	StandUp(); 
+        }
+
 		if (gameObject.GetComponent<Transform> ().position.y <= -20 || gameObject.GetComponent<Transform> ().position.y >= 20) 
 		{
 			SceneManager.LoadScene (level.ID + 1);
@@ -72,14 +79,6 @@ public class PlayerController : MonoBehaviour
 		} else {
 			anim.SetBool("Running", false);
 		}
-
-		if(!crouching && grounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.DownArrow))) {
-            Crouch();
-        }
- 
-		if(crouching && (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.DownArrow))) {
-        	StandUp(); 
-        }
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
 		if(h * GetComponent<Rigidbody2D>().velocity.x <= maxSpeed) {
