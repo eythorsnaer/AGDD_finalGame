@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 38508246}
   - component: {fileID: 38508245}
   - component: {fileID: 38508244}
+  - component: {fileID: 38508247}
   m_Layer: 8
   m_Name: StaticBlock (30)
   m_TagString: Untagged
@@ -386,7 +387,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 38508242}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -428,6 +429,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &38508247
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38508242}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &40896211
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +461,7 @@ GameObject:
   - component: {fileID: 40896215}
   - component: {fileID: 40896214}
   - component: {fileID: 40896213}
+  - component: {fileID: 40896216}
   m_Layer: 8
   m_Name: StaticBlock (29)
   m_TagString: Untagged
@@ -485,7 +507,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 40896211}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -527,6 +549,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &40896216
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40896211}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &45346004
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +581,7 @@ GameObject:
   - component: {fileID: 45346008}
   - component: {fileID: 45346007}
   - component: {fileID: 45346006}
+  - component: {fileID: 45346009}
   m_Layer: 8
   m_Name: StaticBlock (32)
   m_TagString: Untagged
@@ -584,7 +627,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 45346004}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -626,6 +669,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &45346009
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45346004}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &59900978
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +701,7 @@ GameObject:
   - component: {fileID: 59900982}
   - component: {fileID: 59900981}
   - component: {fileID: 59900980}
+  - component: {fileID: 59900983}
   m_Layer: 8
   m_Name: StaticBlock (25)
   m_TagString: Untagged
@@ -683,7 +747,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 59900978}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -725,6 +789,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &59900983
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59900978}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &85154070
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +821,7 @@ GameObject:
   - component: {fileID: 85154074}
   - component: {fileID: 85154073}
   - component: {fileID: 85154072}
+  - component: {fileID: 85154075}
   m_Layer: 8
   m_Name: StaticBlock (34)
   m_TagString: Untagged
@@ -782,7 +867,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 85154070}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -824,6 +909,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &85154075
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 85154070}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &232714798
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +941,7 @@ GameObject:
   - component: {fileID: 232714802}
   - component: {fileID: 232714801}
   - component: {fileID: 232714800}
+  - component: {fileID: 232714803}
   m_Layer: 8
   m_Name: StaticBlock (12)
   m_TagString: Untagged
@@ -881,7 +987,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 232714798}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -923,6 +1029,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &232714803
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232714798}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &256009649
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +1061,7 @@ GameObject:
   - component: {fileID: 256009653}
   - component: {fileID: 256009652}
   - component: {fileID: 256009651}
+  - component: {fileID: 256009654}
   m_Layer: 8
   m_Name: StaticBlock (38)
   m_TagString: Untagged
@@ -980,7 +1107,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 256009649}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1022,6 +1149,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &256009654
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256009649}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &346911457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1302,7 @@ GameObject:
   - component: {fileID: 434165882}
   - component: {fileID: 434165881}
   - component: {fileID: 434165880}
+  - component: {fileID: 434165883}
   m_Layer: 8
   m_Name: StaticBlock (35)
   m_TagString: Untagged
@@ -1200,7 +1348,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 434165878}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1242,6 +1390,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &434165883
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434165878}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &495957916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1422,7 @@ GameObject:
   - component: {fileID: 495957920}
   - component: {fileID: 495957919}
   - component: {fileID: 495957918}
+  - component: {fileID: 495957921}
   m_Layer: 8
   m_Name: StaticBlock (31)
   m_TagString: Untagged
@@ -1299,7 +1468,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 495957916}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1341,6 +1510,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &495957921
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495957916}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &532188933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1542,7 @@ GameObject:
   - component: {fileID: 532188937}
   - component: {fileID: 532188936}
   - component: {fileID: 532188935}
+  - component: {fileID: 532188938}
   m_Layer: 8
   m_Name: StaticBlock (28)
   m_TagString: Untagged
@@ -1398,7 +1588,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 532188933}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1440,6 +1630,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &532188938
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 532188933}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &551180218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1783,7 @@ GameObject:
   - component: {fileID: 556016631}
   - component: {fileID: 556016630}
   - component: {fileID: 556016629}
+  - component: {fileID: 556016632}
   m_Layer: 8
   m_Name: StaticBlock (33)
   m_TagString: Untagged
@@ -1618,7 +1829,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 556016627}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1660,6 +1871,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &556016632
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556016627}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &598223398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +2150,7 @@ GameObject:
   - component: {fileID: 680777726}
   - component: {fileID: 680777725}
   - component: {fileID: 680777724}
+  - component: {fileID: 680777727}
   m_Layer: 8
   m_Name: StaticBlock (17)
   m_TagString: Untagged
@@ -1964,7 +2196,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 680777722}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2006,6 +2238,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &680777727
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680777722}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &796166006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2391,7 @@ GameObject:
   - component: {fileID: 882934289}
   - component: {fileID: 882934288}
   - component: {fileID: 882934287}
+  - component: {fileID: 882934290}
   m_Layer: 8
   m_Name: StaticBlock (19)
   m_TagString: Untagged
@@ -2184,7 +2437,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 882934285}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2226,6 +2479,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &882934290
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882934285}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &988901366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2511,7 @@ GameObject:
   - component: {fileID: 988901370}
   - component: {fileID: 988901369}
   - component: {fileID: 988901368}
+  - component: {fileID: 988901371}
   m_Layer: 8
   m_Name: StaticBlock (26)
   m_TagString: Untagged
@@ -2283,7 +2557,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 988901366}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2325,6 +2599,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &988901371
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988901366}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1092701824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2631,7 @@ GameObject:
   - component: {fileID: 1092701828}
   - component: {fileID: 1092701827}
   - component: {fileID: 1092701826}
+  - component: {fileID: 1092701829}
   m_Layer: 8
   m_Name: StaticBlock (15)
   m_TagString: Untagged
@@ -2382,7 +2677,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1092701824}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2424,6 +2719,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1092701829
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092701824}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1112419921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2751,7 @@ GameObject:
   - component: {fileID: 1112419925}
   - component: {fileID: 1112419924}
   - component: {fileID: 1112419923}
+  - component: {fileID: 1112419926}
   m_Layer: 8
   m_Name: StaticBlock (14)
   m_TagString: Untagged
@@ -2481,7 +2797,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1112419921}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2523,6 +2839,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1112419926
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112419921}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1120046501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2871,7 @@ GameObject:
   - component: {fileID: 1120046505}
   - component: {fileID: 1120046504}
   - component: {fileID: 1120046503}
+  - component: {fileID: 1120046506}
   m_Layer: 8
   m_Name: StaticBlock (22)
   m_TagString: Untagged
@@ -2580,7 +2917,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1120046501}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2622,6 +2959,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1120046506
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1120046501}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1123250968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,6 +2991,7 @@ GameObject:
   - component: {fileID: 1123250972}
   - component: {fileID: 1123250971}
   - component: {fileID: 1123250970}
+  - component: {fileID: 1123250973}
   m_Layer: 8
   m_Name: StaticBlock (20)
   m_TagString: Untagged
@@ -2679,7 +3037,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1123250968}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2721,6 +3079,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1123250973
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123250968}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1178658907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,6 +3111,7 @@ GameObject:
   - component: {fileID: 1178658911}
   - component: {fileID: 1178658910}
   - component: {fileID: 1178658909}
+  - component: {fileID: 1178658912}
   m_Layer: 8
   m_Name: StaticBlock (11)
   m_TagString: Untagged
@@ -2778,7 +3157,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1178658907}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2820,6 +3199,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1178658912
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178658907}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1363005500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,6 +3352,7 @@ GameObject:
   - component: {fileID: 1365418591}
   - component: {fileID: 1365418590}
   - component: {fileID: 1365418589}
+  - component: {fileID: 1365418592}
   m_Layer: 8
   m_Name: StaticBlock (21)
   m_TagString: Untagged
@@ -2998,7 +3398,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1365418587}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3040,6 +3440,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1365418592
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365418587}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1388708322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,6 +3472,7 @@ GameObject:
   - component: {fileID: 1388708326}
   - component: {fileID: 1388708325}
   - component: {fileID: 1388708324}
+  - component: {fileID: 1388708327}
   m_Layer: 8
   m_Name: StaticBlock (39)
   m_TagString: Untagged
@@ -3097,7 +3518,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1388708322}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3139,6 +3560,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1388708327
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388708322}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1423837630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3592,7 @@ GameObject:
   - component: {fileID: 1423837634}
   - component: {fileID: 1423837633}
   - component: {fileID: 1423837632}
+  - component: {fileID: 1423837635}
   m_Layer: 8
   m_Name: StaticBlock (37)
   m_TagString: Untagged
@@ -3196,7 +3638,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1423837630}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3238,6 +3680,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1423837635
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423837630}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1592460258
 Prefab:
   m_ObjectHideFlags: 0
@@ -3292,6 +3754,7 @@ GameObject:
   - component: {fileID: 1699307139}
   - component: {fileID: 1699307138}
   - component: {fileID: 1699307137}
+  - component: {fileID: 1699307140}
   m_Layer: 8
   m_Name: StaticBlock (40)
   m_TagString: Untagged
@@ -3337,7 +3800,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1699307135}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3379,6 +3842,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1699307140
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699307135}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1897994819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,6 +3874,7 @@ GameObject:
   - component: {fileID: 1897994823}
   - component: {fileID: 1897994822}
   - component: {fileID: 1897994821}
+  - component: {fileID: 1897994824}
   m_Layer: 8
   m_Name: StaticBlock (16)
   m_TagString: Untagged
@@ -3436,7 +3920,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1897994819}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3478,6 +3962,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1897994824
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1897994819}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1937625827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +3994,7 @@ GameObject:
   - component: {fileID: 1937625831}
   - component: {fileID: 1937625830}
   - component: {fileID: 1937625829}
+  - component: {fileID: 1937625832}
   m_Layer: 8
   m_Name: StaticBlock (23)
   m_TagString: Untagged
@@ -3535,7 +4040,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1937625827}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3577,6 +4082,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1937625832
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1937625827}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1951665637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3589,6 +4114,7 @@ GameObject:
   - component: {fileID: 1951665641}
   - component: {fileID: 1951665640}
   - component: {fileID: 1951665639}
+  - component: {fileID: 1951665642}
   m_Layer: 8
   m_Name: StaticBlock (13)
   m_TagString: Untagged
@@ -3634,7 +4160,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1951665637}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3676,6 +4202,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1951665642
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951665637}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1968138852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,6 +4234,7 @@ GameObject:
   - component: {fileID: 1968138856}
   - component: {fileID: 1968138855}
   - component: {fileID: 1968138854}
+  - component: {fileID: 1968138857}
   m_Layer: 8
   m_Name: StaticBlock (10)
   m_TagString: Untagged
@@ -3733,7 +4280,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1968138852}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3775,6 +4322,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &1968138857
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968138852}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2076909564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,6 +4354,7 @@ GameObject:
   - component: {fileID: 2076909568}
   - component: {fileID: 2076909567}
   - component: {fileID: 2076909566}
+  - component: {fileID: 2076909569}
   m_Layer: 8
   m_Name: StaticBlock (36)
   m_TagString: Untagged
@@ -3832,7 +4400,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2076909564}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3874,6 +4442,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &2076909569
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076909564}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2085929217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,6 +4474,7 @@ GameObject:
   - component: {fileID: 2085929221}
   - component: {fileID: 2085929220}
   - component: {fileID: 2085929219}
+  - component: {fileID: 2085929222}
   m_Layer: 8
   m_Name: StaticBlock (24)
   m_TagString: Untagged
@@ -3931,7 +4520,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2085929217}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -3973,6 +4562,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &2085929222
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085929217}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2131729505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3985,6 +4594,7 @@ GameObject:
   - component: {fileID: 2131729509}
   - component: {fileID: 2131729508}
   - component: {fileID: 2131729507}
+  - component: {fileID: 2131729510}
   m_Layer: 8
   m_Name: StaticBlock (18)
   m_TagString: Untagged
@@ -4030,7 +4640,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2131729505}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -4072,6 +4682,26 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &2131729510
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2131729505}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2137782329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4084,6 +4714,7 @@ GameObject:
   - component: {fileID: 2137782333}
   - component: {fileID: 2137782332}
   - component: {fileID: 2137782331}
+  - component: {fileID: 2137782334}
   m_Layer: 8
   m_Name: StaticBlock (27)
   m_TagString: Untagged
@@ -4129,7 +4760,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2137782329}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -4171,3 +4802,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &2137782334
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2137782329}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 5ac6090d035c6424bb4b40e3baabd4fc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
