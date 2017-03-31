@@ -17,9 +17,73 @@ Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Manag
 Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.127 seconds
+- Completed reload, in  0.024 seconds
 Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\School\AGDD\AGDD_finalGame\LatestBuild\Krafkatk_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 1.107358 ms
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 2.047211 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1075.
+Total: 0.369778 ms (FindLiveObjects: 0.044642 ms CreateObjectMapping: 0.022123 ms MarkObjects: 0.292740 ms  DeleteObjects: 0.010271 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+baaa
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+baaa
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.847013 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1600.
+Total: 0.595753 ms (FindLiveObjects: 0.101926 ms CreateObjectMapping: 0.050963 ms MarkObjects: 0.429037 ms  DeleteObjects: 0.013432 ms)
+
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+baaa
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+baaa
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+WARNING: BC6H/BC7 texture format is not supported, decompressing texture
+UnloadTime: 1.133037 ms
+
+Unloading 95 unused Assets to reduce memory usage. Loaded Objects now: 884.
+Total: 0.732049 ms (FindLiveObjects: 0.056493 ms CreateObjectMapping: 0.023308 ms MarkObjects: 0.348839 ms  DeleteObjects: 0.302617 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 21a8 -> priority: 1 
+  Thread -> id: 230 -> priority: 1 
