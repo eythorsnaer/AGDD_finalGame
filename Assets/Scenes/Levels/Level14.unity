@@ -4614,7 +4614,7 @@ Prefab:
     - target: {fileID: 114938248152938522, guid: 411f53862ae7249fc8e0138d332026cc,
         type: 2}
       propertyPath: hasMapPiece
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114938248152938522, guid: 411f53862ae7249fc8e0138d332026cc,
         type: 2}
