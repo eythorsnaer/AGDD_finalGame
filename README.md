@@ -1,1 +1,3 @@
-# AGDD_finalGame
+# Krafkatk
+
+Small puzzle platformer by Bjartur, Eyþór and Gunnar
